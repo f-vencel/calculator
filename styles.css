@@ -1,0 +1,202 @@
+body, #nav, #nav #title, #container #nav #color-mode, #nav #color-mode #dark, #nav #color-mode #bright, .button {
+  display: flex;
+  align-items: center;
+}
+
+.button, #container #nav #color-mode, #nav #color-mode #dark, #nav #color-mode #bright {
+  cursor: pointer;
+  user-select: none;
+}
+
+#nav #title, .screen > div, .button {
+  font-family: 'Ubuntu', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  justify-content: center;
+  height: 100vh;
+  margin: 0px;
+  transition: background-color 0.1s;
+}
+body.bright { background-color: #baf; }
+body.dark { background-color: #306; }
+body.night { background-color: #000; }
+
+#container {
+  box-sizing: border-box;
+  border-radius: 15px;
+  width: 500px;
+  height: 700px;
+  overflow: hidden;
+}
+
+#container.bright {
+  background-color: #eee;
+  color: #000;
+  border: 1px solid #baf;
+  box-shadow: 0px 0px 15px #669;
+}
+
+#container.dark {
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #306;
+  box-shadow: 0px 0px 15px #102;
+}
+
+#container.night {
+  background-color: #080808;
+  color: #77d;
+  border: 1px solid #000;
+  box-shadow: 0px 0px 15px #000;
+}
+
+#nav {
+  justify-content: space-between;
+  height: 10%;
+}
+
+#nav #title {
+  font-size: 25px;
+  margin-left: 20px;
+  user-select: none;
+}
+
+#container #nav #color-mode {
+  justify-content: space-around;
+  margin-right: 20px;
+  height: 50%;
+  aspect-ratio: 2;
+  border-radius: 50% / 100%;
+}
+
+#container.bright #nav #color-mode {
+  background-color: #fff;
+  box-shadow: 0px 5px 8px #aaa;
+}
+#container.dark #nav #color-mode {
+  background-color: #222;
+  box-shadow: 0px 5px 8px #000;
+}
+
+#container.night #nav #color-mode {
+  background-color: #080808;
+  box-shadow: 0px 5px 8px #000;
+}
+
+#nav #color-mode #dark, #nav #color-mode #bright {
+  background-color: inherit;
+  padding: 0px;
+  border: 0px;
+  box-sizing: border-box;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  border-radius: 50%;
+}
+#nav #color-mode #dark > img {
+  transition: filter 0.1s;
+}
+
+.screen {
+  display: flex;
+  height: 25%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.screen > div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.screen #previous {
+  font-size: 20px;
+  color: #999;
+  margin-right: 20px;
+}
+.screen #main-screen {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 20px;
+}
+
+#main-input {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 65%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.button {
+  background-color: inherit;
+  color: inherit;
+  justify-content: center;
+  width: 19%;
+  margin: 5px 3%;
+  border-radius: 10px;
+  border: none;
+  padding: 0px;
+  font-size: 32px;
+  font-weight: 700;
+  transition: background-color 0.1s, box-shadow 0.1s, transform 0.1s;
+}
+.button:hover { transition: background-color 0.1s;}
+
+.button.onMouseDown {
+  transform: translate(-2px, 2px);
+  transition: background-color 0.1s, box-shadow 0.1s, transform 0.1s;
+}
+
+.button.bright { box-shadow: 0px 5px 8px #aaa; }
+.button.bright:hover { background-color: #ddd; }
+.button.bright.onMouseDown {
+  background-color: #aaa;
+  box-shadow: 0px 0px #aaa;
+}
+
+.button.dark { box-shadow: 0px 5px 18px #000; }
+.button.dark:hover { background-color: #222; }
+.button.dark.onMouseDown {
+  background-color: #444;
+  box-shadow: 0px 0px 0px 0px #000;
+}
+
+.button.night { box-shadow: 0px 5px 18px #000; }
+.button.night:hover { background-color: #101010; }
+.button.night.onMouseDown {
+  background-color: #181818;
+  box-shadow: 0px 0px 0px 0px #000;
+}
+
+.longButton {
+  width: 44%;
+  margin: 5px 3%;
+}
+
+.button.bright.equal { background-color: #baf; }
+.button.bright.equal:hover { background-color: #a9e; }
+.button.bright.equal.onMouseDown { background-color: #87c; }
+.button.dark.equal { background-color: #306; }
+.button.dark.equal:hover { background-color: #417; }
+.button.dark.equal.onMouseDown { background-color: #639; }
+.button.night.equal { background-color: #104; }
+.button.night.equal:hover { background-color: #215; }
+.button.night.equal.onMouseDown { background-color: #326; }
+
+.button.reset.bright, .button.clear.bright { color: #87c; }
+.button.reset.dark, .button.clear.dark { color: #306; }
+.button.reset.night, .button.clear.night { color: #306; }
+
+.button.operation.bright, .button.operation.bright { color: #54f; }
+.button.operation.dark, .button.operation.dark { color: #10f; }
+.button.operation.night, .button.operation.night { color: #080055; }
+
+.button.precentage, .button.decimal { color: #0aa; }

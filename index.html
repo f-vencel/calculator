@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" type="image/x-icon" href="/images/calculator.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="container" class="bright">
+    <div id="nav">
+      <div id="title">Calculator</div>
+      <div id="color-mode">
+        <button type="button" id="dark"><img src="images/dark.png" alt="dark" style="height: 50%; opacity: 30%;"></button>
+        <button type="button" id="bright"><img src="images/light.png" alt="light" style="height: 80%; opacity: 100%;"></button>
+      </div>
+    </div>
+    <div class="screen">
+      <div id="previous"></div>
+      <div id="main-screen">0</div>
+    </div>
+    <div id="main-input">
+      <button type="button" class="button reset">AC</button>
+      <button type="button" class="button clear">C</button>
+      <button type="button" class="button precentage">%</button>
+      <button type="button" class="button divide operation">&divide;</button>
+      <button type="button" class="button number">7</button>
+      <button type="button" class="button number">8</button>
+      <button type="button" class="button number">9</button>
+      <button type="button" class="button multiply operation">&times;</button>
+      <button type="button" class="button number">4</button>
+      <button type="button" class="button number">5</button>
+      <button type="button" class="button number">6</button>
+      <button type="button" class="button subtract operation">-</button>
+      <button type="button" class="button number">1</button>
+      <button type="button" class="button number">2</button>
+      <button type="button" class="button number">3</button>
+      <button type="button" class="button add operation">+</button>
+      <button type="button" class="button number longButton">0</button>
+      <button type="button" class="button decimal">.</button>
+      <button type="button" class="button equal">=</button>
+    </div>
+  </div>
+</body>
+</html>
